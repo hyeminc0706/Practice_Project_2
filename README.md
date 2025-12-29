@@ -1,31 +1,85 @@
-# ALTools Practice Project
+# ALTools Practice Project  
+### UI/UX Design & Frontend Implementation (Personal Practice Project)
+
+A front‑end practice project focused on exploring UI layout, animations, and interactive components.  
+I designed and developed the entire interface to study how motion and component behavior influence user experience.
+
+---
 
 ## Overview
-A single-page practice project inspired by the ALTools website.  
-Built with HTML, CSS, and JavaScript to strengthen frontend skills.  
-This project focuses on desktop layout only.
+This project was created to practice building modular UI components and applying animations to enhance interaction flow.  
+The goal was to understand how layout, timing, and motion contribute to a more engaging user interface.
+<img width="3408" height="1948" alt="image" src="https://github.com/user-attachments/assets/047c9b1c-0a11-4a91-9756-929b18c34b96" />
 
+---
 
-## Screenshots
-### Desktop View
-<img width="1702" height="942" alt="image" src="https://github.com/user-attachments/assets/9fc484bc-5121-4300-bec9-dacafeb8073f" />
+## Goals
+- Explore animation timing, easing, and motion patterns  
+- Build modular UI components with clear interaction logic  
+- Strengthen front‑end implementation skills through hands‑on practice  
 
-## Demo
-https://hyeminc0706.github.io/Practice_Project/
+---
+
+## My Role
+- UI/UX Design  
+- Frontend Development  
+- QA & Debugging  
+
+---
 
 ## Tech Stack
-- HTML5
-- CSS3
-- JavaScript
-- jQuery
+- HTML5  
+- CSS3  
+- JavaScript  
+- jQuery  
+- Slick Slider  
 
-## Features
-- Static layout with custom styling
-- Interactive elements using jQuery
-- Focused on UI/UX practice
+---
 
-## Contribution
-UI/UX design and frontend development (80%)
+## Process
+
+### 1. Concept & Wireframing
+- Planned the project concept  
+- Created wireframes focused on modular UI components  
+- Defined interaction flow and animation behavior  
+
+### 2. UI Design
+- Designed a clean, structured layout  
+- Applied spacing and contrast for clarity  
+- Defined motion patterns for sliders and hover interactions
+<img width="3326" height="940" alt="image" src="https://github.com/user-attachments/assets/38ae9d09-c1b8-4f2d-9e87-dcabe3644f24" />
+<img width="3386" height="1832" alt="image" src="https://github.com/user-attachments/assets/da9c91ab-72dd-4a05-8d49-22bc2b7588ec" />
+
+
+### 3. Development
+- Built the layout using HTML/CSS  
+- Developed UI components with JavaScript/jQuery  
+- Integrated sliders and animations  
+- Conducted cross‑browser testing and refinements  
+
+---
+
+## Design Decisions
+- Used motion to guide user attention  
+- Applied consistent animation timing for smoother flow  
+- Built components to be modular and reusable  
+- Prioritized clarity and simplicity in layout structure  
+
+---
+
+## Learnings
+- Improved understanding of animation timing and easing  
+- Learned how motion affects user perception and flow  
+- Strengthened ability to build modular UI components  
+
+---
+
+## Live Demo & Source
+- Live Demo: https://hyeminc0706.github.io/Practice_Project/
+- GitHub Repository: https://github.com/hyeminc0706/Practice_Project
+- Case Study: https://little-gauge-2b1.notion.site/ALTools-UI-Animation-Component-Practice-2d82c743869e80d3ba1fc5f975b0a579
+
+---
 
 ## Installation
 ```bash
