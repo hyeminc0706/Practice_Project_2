@@ -50,7 +50,6 @@ The goal was to understand how layout, timing, and motion contribute to a more e
 <img width="3326" height="940" alt="image" src="https://github.com/user-attachments/assets/38ae9d09-c1b8-4f2d-9e87-dcabe3644f24" />
 <img width="3386" height="1832" alt="image" src="https://github.com/user-attachments/assets/da9c91ab-72dd-4a05-8d49-22bc2b7588ec" />
 
-
 ### 3. Development
 - Built the layout using HTML/CSS  
 - Developed UI components with JavaScript/jQuery  
