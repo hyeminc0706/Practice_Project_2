@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PF2디자인클론코딩:알툴스 </title>
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <!--슬릭-->
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+        <link rel="stylesheet" href="css/reset.css">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/responsive.css">
 
-    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.7.1.js"></script>
-    <script type="text/javascript" src="js/jquery-3.7.0.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+        <!-- slick carousel: css & js (로컬 파일 사용, 순서 중요) -->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <!-- jQuery는 slick.js보다 반드시 먼저 로드되어야 함 -->
+        <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+
+        <!--
+            ⚠️ 파일을 더블클릭해서 열지 말고, Live Server(확장) 또는 python -m http.server 등 웹서버 환경에서 실행하세요.
+            그렇지 않으면 js/css가 올바른 MIME 타입으로 서빙되지 않아 슬라이더가 동작하지 않습니다.
+        -->
+        <!-- .wnext button 스타일은 css/index.css에서 관리 -->
         <script type="text/javascript">
         $(document).ready(function(){
             $('.altoolsAni').slick({
@@ -36,10 +35,18 @@
                 autoplaySpeed: 1500,
                 dots: false,
                 infinite: true,
-                arrows: true
+                arrows: false
             });
         });
         $(document).ready(function(){
+            // 슬라이드 번호 표시
+            function updateSlideIndex(event, slick, currentSlide){
+                var current = (typeof currentSlide === 'undefined') ? 1 : currentSlide + 1;
+                var total = slick.slideCount;
+                $('.slide-index').html(current + ' / ' + total);
+            }
+            $('.titleAni').on('init', updateSlideIndex);
+            $('.titleAni').on('afterChange', updateSlideIndex);
             $('.titleAni').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -49,11 +56,27 @@
                 fade: false,
                 dots: false,
                 infinite: true,
-                arrows: true
+                arrows: false
             });
-            var sw = 0;
-            //플레이정지 버튼 묶음
-            $("#altools  .slick-next,#altools .btn_pause").wrapAll("<div class='wnext'></div>");
+            // 커스텀 컨트롤 버튼 이벤트 연결 (토글)
+            var isPaused = false;
+            $('.wnext .btn_toggle_play').on('click', function() {
+                if (!isPaused) {
+                    $('.titleAni').slick('slickPause');
+                    $(this).attr('aria-label', '재생').html('&#9654;');
+                    isPaused = true;
+                } else {
+                    $('.titleAni').slick('slickPlay');
+                    $(this).attr('aria-label', '일시정지').html('&#10073;&#10073;');
+                    isPaused = false;
+                }
+            });
+            $('.wnext .btn_prev').on('click', function() {
+                $('.titleAni').slick('slickPrev');
+            });
+            $('.wnext .btn_next').on('click', function() {
+                $('.titleAni').slick('slickNext');
+            });
         });
         $(document).ready(function(){
             $('.promotionAni').slick({
@@ -65,7 +88,14 @@
                 fade: false,
                 dots: false,
                 infinite: true,
-                arrows: true
+                arrows: false // 기본 slick arrows 숨김
+            });
+            // 커스텀 버튼 이벤트 연결
+            $('.promotion-arrow.promotion-prev').on('click', function(){
+                $('.promotionAni').slick('slickPrev');
+            });
+            $('.promotion-arrow.promotion-next').on('click', function(){
+                $('.promotionAni').slick('slickNext');
             });
         });
         //플레이 버튼 
@@ -87,9 +117,71 @@
     <!-- 상단영역 -->
     <header>
         <div class="wrap2 flex">
-            <h1><a href="" class="block">ALtools</a></h1>
+            <h1><a href="https://hyeminc0706.github.io/Practice_Project/" class="block">ALtools</a></h1>
             <ul class="flex">
-                <li><a href="" class="block">알툴즈 다운로드</a></li>
+                <li class="menu-download gnb-dropdown">
+                    <a href="#" class="block">알툴즈 다운로드</a>
+                    <div class="dropdown-menu download-menu">
+                        <div class="dropdown-section grid-4col">
+                            <div class="dropdown-group">
+                                <h3 class="dropdown-title">Tools</h3>
+                                <div class="dropdown-grid grid-4">
+                                    <a href="https://altools.co.kr/product/ALZIP" class="dropdown-item">
+                                        <img src="img/icon_120_alzip.png" alt="알집" class="dropdown-icon">알집
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALPDF" class="dropdown-item">
+                                        <img src="img/icon6.png" alt="알PDF" class="dropdown-icon">알PDF
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALCAPTURE" class="dropdown-item">
+                                        <img src="img/icon5.png" alt="알캡처" class="dropdown-icon">알캡처
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALSEE" class="dropdown-item">
+                                        <img src="img/icon4.png" alt="알씨" class="dropdown-icon">알씨
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALDRIVE" class="dropdown-item">
+                                        <img src="img/icon8.png" alt="알드라이브" class="dropdown-icon">알드라이브
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALSONG" class="dropdown-item">
+                                        <img src="img/icon_120_alsong.png" alt="알송" class="dropdown-icon">알송
+                                    </a>
+                                    <a href="https://altools.co.kr/product/PICNIC" class="dropdown-item">
+                                        <img src="img/icon_120_picnicMobile.png" alt="피크닉" class="dropdown-icon">피크닉
+                                    </a>
+                                    <a href="https://advert.estsoft.com/?event=202307041298958" class="dropdown-item" target="_blank">
+                                        <img src="img/icon_120_alan.png" alt="앨런" class="dropdown-icon">앨런
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dropdown-group">
+                                <h3 class="dropdown-title">알툴즈 Lab</h3>
+                                <div class="dropdown-grid grid-4">
+                                    <a href="https://altools.co.kr/product/ALTAB" class="dropdown-item">
+                                        <img src="img/icon_120_altab.png" alt="알탭" class="dropdown-icon">알탭
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALPEN" class="dropdown-item">
+                                        <img src="img/icon_120_alpen.png" alt="알펜" class="dropdown-icon">알펜
+                                    </a>
+                                    <a href="https://altools.co.kr/product/ALCLIP" class="dropdown-item">
+                                        <img src="img/icon_120_alclip.png" alt="알클립" class="dropdown-icon">알클립
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dropdown-group">
+                                <h3 class="dropdown-title">Security</h3>
+                                <div class="dropdown-grid grid-4">
+                                    <a href="https://altools.co.kr/product/ALYAC" class="dropdown-item">
+                                        <img src="img/icon3.png" alt="알약" class="dropdown-icon">알약
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-bottom">
+                            <a href="https://altools.co.kr/product/ALTOOLS" class="dropdown-pack">
+                                <strong>알툴즈 모든 제품을 한 번에.<em>알툴즈 통합팩</em></strong>
+                            </a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="https://altools.co.kr/adzero/intro" class="block">알툴즈 AD-ZERO</a></li>
                 <li><a href="https://altools.co.kr/business" class="block">비즈니스 구매</a></li>
                 <li><a href="" class="block">고객센터</a></li>
@@ -109,7 +201,13 @@
     </header>
     <!-- 타이틀영역 -->
     <div id="title">
-        <div class="wrap flex">
+        <div class="wrap flex" style="position:relative;">
+            <div class="wnext">
+                <button type="button" class="btn_prev" aria-label="이전"><img src="img/left-arrow.png" alt="이전" style="width:10px;height:10px;"></button>
+                <span class="slide-index" style="display:inline-block;min-width:40px;text-align:center;font-size:13px;color:#222;"></span>
+                <button type="button" class="btn_toggle_play" aria-label="일시정지">&#10073;&#10073;</button>
+                <button type="button" class="btn_next" aria-label="다음"><img src="img/right-arrow.png" alt="다음" style="width:10px;height:10px;"></button>
+            </div>
             <h2 class="">title</h2>
             <div class="titleAni flex">
                 <div class="t1">
@@ -190,7 +288,7 @@
                     <li>
                         <a href="https://altools.co.kr/product/ALZIP" class="block">
                             <figure class="flex">
-                                <img src="img/icon2.png" alt="">
+                                <img src="img/icon_120_alzip.png" alt="">
                                 <figcaption>
                                     <h3 class="sm14 bold">알집</h3>
                                     <p class="sm13">전국민 압축 <span class="block"></span>
@@ -250,7 +348,7 @@
                     <li>
                         <a href="https://altools.co.kr/product/ALSONG" class="block">
                             <figure class="flex">
-                                <img src="img/icon7.png" alt="">
+                                <img src="img/icon_120_alsong.png" alt="">
                                 <figcaption>
                                     <h3 class="sm14 bold">알송</h3>
                                     <p class="sm13">온라인 음악가사 <span class="block"></span>
@@ -289,7 +387,7 @@
                 <h2 class="hide">비즈니스 구매</h2>
                 <p class="h2 bold">알툴즈 기업용, 알약 기업용 제품의 <span class="block"></span>
                     라이선스를 확인하세요.</p>
-                <a href="https://altools.co.kr/business" class="block">비즈니스 구매 자세히보기</a>
+                <a href="https://secure.altools.co.kr/buy/" class="block">비즈니스 구매 자세히보기</a>
             </div>
         </section>
         <!-- 알툴즈 -->
@@ -360,16 +458,18 @@
         </section>
         <!-- 프로모션 -->
         <section id="promotion">
-            <div class="wrap flex">
+            <div class="wrap flex" style="position:relative;">
                 <h2 class=" hide">프로모션</h2>
-                <ul class="promotionAni flex">
+                <button type="button" class="promotion-arrow promotion-prev" aria-label="이전"><img src="img/arrowright.png" alt="이전" style="transform:rotate(180deg);"></button>
+                <button type="button" class="promotion-arrow promotion-next" aria-label="다음"><img src="img/arrowright.png" alt="다음"></button>
+                <ul class="promotionAni" style="position:relative;">
                     <li>
                         <a href="" class="block flex">
                             <h3 class="h3 bold"><strong class="h6 bold block">얼리버드 할인 프로모션</strong>알툴즈 <i class="eng">AD-ZERO</i> 서비스 런칭</h3>
                             <p class="h6 bold">광고없이 쾌적한 알툴즈를 사용할 수 있는 <span class="block"></span>구독서비스를 확인해보세요</p>
                         </a>
                     </li>
-                    <li class="hide">
+                    <li>
                         <a href="" class="block flex">
                             <h3 class="h3 bold"><strong class="h6 bold">프로모션</strong>첫 구독 금액 포인트 페이백</h3>
                             <p class="h6 bold">알툴즈 AD-ZERO 서비스 런칭 기념으로<span class="block"></span>
@@ -377,11 +477,16 @@
                             <p>적립된 포인트는 2023년 8월부터 사용 가능합니다.</p>
                         </a>
                     </li>
-                    <li class="hide">
+                    <li>
                         <a href="" class="block flex">
                             <h3 class="h3 bold"><strong class="h6 bold">NEW</strong>알캡처 신규 beta 서비스!</h3>
-                            <p class="h6 bold">원하는 영역만 골라서 배경을 투명하게!<span class="block"></span>
-                                AI 배경 제거를 사용해 보세요.</p>
+                            <p class="h6 bold">배경을 투명하게!</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="block flex">
+                            <h3 class="h3 bold"><strong class="h6 bold">프로모션4</strong>추가 슬라이드</h3>
+                            <p class="h6 bold">promotion4.jpg에 맞는 설명을 입력하세요.</p>
                         </a>
                     </li>
                 </ul>
@@ -393,7 +498,7 @@
                 <h2 class="h3 bold">더욱 다양하고 쾌적하게 활용하는 꿀팁</h2>
                 <ul class="grid">
                     <li>
-                        <a href="" class="block">
+                        <a href="https://altools.co.kr/adzero/intro" class="block">
                             <h3 class="h4 bold">광고 없이,<span class="block"></span>
                                 제휴 설치 없이.</h3>
                             <p class="sm13">쾌적한 PC환경을 제공하는<span class="block"></span>
@@ -401,27 +506,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block">
+                        <a href="https://altools.co.kr/product/ALPDF" class="block">
                             <h3 class="h5 bold">알PDF, 인쇄도 더 다양하게</h3>
                             <p class="sm13">알PDF로 문서 인쇄하는 방법</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block">
+                        <a href="https://altools.co.kr/product/ALCAPTURE" class="block">
                             <h3 class="h5 bold">알캡처, 이미지 배경을 투명하게</h3>
                             <p class="sm13">캡처한 이미지에서 원하는 영역만​<span class="block"></span>
                                 골라서 저장할 수 있어요.</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block">
+                        <a href="https://altools.co.kr/product/ALZIP" class="block">
                             <h3 class="h5 bold">알집, 압축파일 이름이 깨질 때</h3>
                             <p class="sm13">알집 모바일 유니코드 설정으로<span class="block"></span>
                                 깨짐없이 압축 해제하는 방법</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block">
+                        <a href="https://altools.co.kr/product/ALSEE" class="block">
                             <h3 class="h5 bold">알씨, 급할 때는 집에서!</h3>
                             <p class="sm13">알씨를 활용하여<span class="block"></span>
                                 셀프로 증명사진 만들기</p>
@@ -435,19 +540,19 @@
                 <h2 class="hide">News</h2>
                 <ul class="flex">
                     <li>
-                        <a href="" class="block grid">
+                        <a href="https://blog.naver.com/estpublic" class="block grid">
                             <p class="h6">더 많은 알툴즈 꿀팁은</p>
                             <span class="h6 bold">알툴즈 블로그 바로가기</span>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block grid">
+                        <a href="https://estsoft.ai/en/" class="block grid">
                             <p class="h6">가장 빠른 인공지능 소식은</p>
                             <span class="h6 bold">이스트소프트 바로가기</span>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="block grid">
+                        <a href="https://www.estsecurity.com/" class="block grid">
                             <p class="h6">최신 보안 소식은</p>
                             <span class="h6 bold">이스트시큐리티 바로가기</span>
                         </a>
@@ -462,21 +567,25 @@
             <h1 class="hide">Altools</h1>
             <ul class="fnb flex">
                 <li>
-                    <h2 class="h6 bold">알툴즈 다운로드</h2>
+                    <h2 class="h6 bold">제품</h2>
                     <ul class="flex">
-                        <li><a href="" class="p15 block">알집</a></li>
-                        <li><a href="" class="p15 block">알씨</a></li>
-                        <li><a href="" class="p15 block">알캡처</a></li>
-                        <li><a href="" class="p15 block">알PDF</a></li>
-                        <li><a href="" class="p15 block">알툴즈 모바일</a></li>
-                        <li><a href="" class="p15 block">알드라이브</a></li>
-                        <li><a href="" class="p15 block">알송</a></li>
-                        <li><a href="" class="p15 block">알약</a></li>
-                        <li><a href="" class="p15 block">앨런 Beta</a></li>
+                        <li><a href="https://altools.co.kr/product/ALZIP" class="p15 block">알집</a></li>
+                        <li><a href="https://altools.co.kr/product/ALSEE" class="p15 block">알씨</a></li>
+                        <li><a href="https://altools.co.kr/product/ALCAPTURE" class="p15 block">알캡처</a></li>
+                        <li><a href="https://altools.co.kr/product/ALPDF" class="p15 block">알PDF</a></li>
+                        <li><a href="https://altools.co.kr/product/ALTAB" class="p15 block">알탭</a></li>
+                        <li><a href="https://altools.co.kr/product/ALDRIVE" class="p15 block">알드라이브</a></li>
+                        <li><a href="https://altools.co.kr/product/ALSONG" class="p15 block">알송</a></li>
+                        <li><a href="https://altools.co.kr/product/ALYAC" class="p15 block">알약</a></li>
+                        <li><a href="https://alan.estsoft.ai/" class="p15 block">앨런 Beta</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h2 class="h6 bold">알툴즈 AD-ZERO</h2>
+                    <h2 class="h6 bold">구독</h2>
+                    <ul class="flex">
+                        <li><a href="https://altools.co.kr/subscription/altools-ai" class="p15 block">알툴즈 AI</a></li>
+                        <li><a href="https://altools.co.kr/adzero/intro" class="p15 block">알툴즈 AD-ZERO</a></li>
+                    </ul>
                 </li>
                 <li>
                     <h2 class="h6 bold">비즈니스 구매</h2>
@@ -484,30 +593,40 @@
                 <li>
                     <h2 class="h6 bold">고객센터</h2>
                     <ul>
-                        <li><a href="" class="p15 block">자주하는 질문</a></li>
-                        <li><a href="" class="p15 block">1:1 문의하기</a></li>
-                        <li><a href="" class="p15 block">공지사항</a></li>
+                        <li><a href="https://altools.co.kr/service/FAQ" class="p15 block">자주하는 질문</a></li>
+                        <li><a href="https://estoneid.com/user/login?redirect_url=%2Fservice%2Fcontact" class="p15 block">1:1 문의하기</a></li>
+                        <li><a href="https://altools.co.kr/service/notice" class="p15 block">공지사항</a></li>
                     </ul>
                 </li>
                 <li>
                     <h2 class="h6 bold">마이페이지</h2>
                     <ul>
-                        <li><a href="" class="p15 block">구독 관리</a></li>
-                        <li><a href="" class="p15 block">포인트 내역</a></li>
-                        <li><a href="" class="p15 block">1:1 문의 내역</a></li>
-                        <li><a href="" class="p15 block">보유 혜택 내역</a></li>
-                        <li><a href="" class="p15 block">계정 설정</a></li>
+                        <li><a href="https://estoneid.com/user/login?redirect_url=%2Fmypage%2Fsubscriptions" class="p15 block">구독 관리</a></li>
+                        <li><a href="https://estoneid.com/user/login?redirect_url=%2Fmypage%2Fpointhistory" class="p15 block">포인트 내역</a></li>
+                        <li><a href="https://estoneid.com/user/login?redirect_url=%2Fmypage%2Finquiry%2Fboard" class="p15 block">1:1 문의 내역</a></li>
+                        <li><a href="https://estoneid.com/user/login?type=callback&redirect_url=https://altools.co.kr/api/auth/sso&client_id=1016833&state=eyJpZCI6ImxvZ2luIiwicmVkaXJlY3RfdXJsIjoiL215cGFnZS9iZW5lZml0In0%3D" class="p15 block">보유 혜택 내역</a></li>
+                        <li><a href="https://estoneid.com/user/login?redirect_url=%2Fmypage%2Fsetting" class="p15 block">계정 설정</a></li>
                     </ul>
                 </li>
             </ul>
             <ul class="fnb2 grid">
-                <li><a href="" class="block">회사소개</a></li>
-                <li><a href="" class="block">이용약관</a></li>
-                <li><a href="" class="block">개인정보처리방침</a></li>
-                <li><a href="" class="block">소프트웨어 사용권 계약서</a></li>
-                <li><a href="" class="block">제휴문의</a></li>
-                <li><a href="" class="block">이벤트</a></li>
-                <li><a href="" class="block">Family Site</a></li>
+                <li><a href="https://estsoft.ai/en/introduce" class="block">회사소개</a></li>
+                <li><a href="https://xdn.altools.co.kr/altoolshp/terms/templates/terms-of-service/docs/251214.html" class="block">이용약관</a></li>
+                <li><a href="https://xdn.altools.co.kr/altoolshp/terms/templates/privacy-policy/docs/251214.html" class="block">개인정보처리방침</a></li>
+                <li><a href="https://xdn.altools.co.kr/altoolshp/terms/templates/eula/docs/241209.html" class="block">소프트웨어 사용권 계약서</a></li>
+                <li><a href="https://estoneid.com/user/login?redirect_url=%2Fservice%2Fcontact" class="block">제휴문의</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html" class="block">이벤트</a></li>
+                <li class="family-site-dropdown">
+                    <a href="#" class="block family-site-toggle">Family Site <span class="plus">+</span></a>
+                    <ul class="family-site-list" style="display:none;">
+                        <li><a href="https://estsoft.ai/" target="_blank">이스트소프트</a></li>
+                        <li><a href="https://www.estsecurity.com/" target="_blank">이스트시큐리티</a></li>
+                        <li><a href="https://www.estgames.com/" target="_blank">이스트게임즈</a></li>
+                        <li><a href="https://www.eastaid.co.kr/" target="_blank">이스트에이드</a></li>
+                        <li><a href="https://rounz.com/" target="_blank">ROUNZ</a></li>
+                        <li><a href="https://exponential.co.kr/" target="_blank">Exponential</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="sns flex">
                 <li><a href="" class="block sm13">이스트소프트</a></li>
@@ -521,5 +640,24 @@
             </address>
         </div>
     </footer>
+<script>
+// Family Site 드롭다운 토글
+document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.querySelector('.family-site-toggle');
+    var menu = document.querySelector('.family-site-list');
+    if (toggle && menu) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        });
+        // 바깥 클릭 시 닫힘
+        document.addEventListener('click', function(e) {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.style.display = 'none';
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
