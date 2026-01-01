@@ -1,3 +1,1221 @@
+/* ======= Footer Family Site Dropdown ======= */
+footer .family-site-dropdown {
+  position: relative;
+  display: inline-block;
+}
+footer .family-site-toggle {
+  cursor: pointer;
+  font-weight: 700;
+  color: #5a6473;
+  font-size: 20px;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 2;
+}
+footer .family-site-toggle .plus {
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+footer .family-site-list {
+  position: absolute;
+  left: 45%;
+  bottom: 37px;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(30,40,60,0.13);
+  margin: 0;
+  list-style: none;
+  z-index: 10;
+  text-align: left;
+  border: none;
+  height: 100%;
+  min-height: 191px;
+  padding: 6px 0px 6px 5px;
+}
+footer .family-site-list li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #3a4350;
+  letter-spacing: -0.5px;
+  position: relative;
+  width: 105px;
+  height: 32px;
+}
+footer .family-site-list li:nth-child(1) a {
+  display: block;
+  align-items: center;
+  color: #3a4350;
+  border-radius: 6px;
+  transition: background 0.13s, color 0.13s;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+footer .family-site-list a:hover {
+  background: #f4f6f8;
+  color: #222;
+}
+/* ===================== GNB 드롭다운 4컬럼 그리드 ===================== */
+header .dropdown-section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);)
+  align-items: ;
+}
+header .dropdown-group {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+header .dropdown-group:nth-of-type(2){
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+header .dropdown-group:nth-of-type(3){
+  grid-column: 2;
+  grid-row: 1 /  span 2;
+  padding-top: 204px;
+}
+
+header .dropdown-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4e5968;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+header .dropdown-grid.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header .dropdown-grid a::after{
+  display: none !important;
+}
+header .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 14px;
+  padding: 10px 22px 10px 10px;
+  transition: background 0.15s, color 0.15s;
+  background: none;
+  box-sizing: border-box;
+}
+header .dropdown-item:hover {
+  background: #f4f6f8;
+  color: #222;
+}
+header .dropdown-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  flex-shrink: 0;
+  margin-right: 0;
+}
+/* span 제거: 텍스트는 a 내부에 바로 위치 */
+/* ===================== GNB 드롭다운(알툴즈 다운로드) 3컬럼 카테고리별 세로정렬 ===================== */
+
+header .dropdown-col {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+}
+header .dropdown-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4e5968;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+header .dropdown-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+header .dropdown-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 6px 8px;
+  transition: background 0.15s, color 0.15s;
+}
+header .dropdown-item:hover {
+  background: rgba(139,149,161,0.08);
+  color: #08f;
+}
+header .dropdown-item img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+header .dropdown-item span {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+/* ===================== GNB 드롭다운(알툴즈 다운로드) 3열 아이콘+텍스트 그리드 ===================== */
+header .gnb-download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header .gnb-download-grid .dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+header .gnb-download-grid .dropdown-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+header .gnb-download-grid .dropdown-item span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+header .gnb-download-grid .dropdown-item:hover {
+  color: #08f;
+}
+/* ===================== 푸터 알툴즈 다운로드 3열 아이콘+텍스트 그리드 ===================== */
+footer .footer-download-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 32px;
+  margin: 24px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+footer .footer-download-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+footer .footer-download-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+footer .footer-download-item span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+footer .footer-download-item:hover {
+  color: #08f;
+}
+/* 이미지가 깨진 경우 해당 제품 항목 숨김 */
+header .dropdown-item img:not([src]):not([src*=".svg"]),
+header .dropdown-item img[src=""],
+header .dropdown-item img[src]:not([src*=".png"]):not([src*=".jpg"]):not([src*=".jpeg"]) {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid + strong,
+header .dropdown-item img[src=""] + strong {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+header .dropdown-item img:invalid {
+  display: none;
+}
+/* ===================== GNB 드롭다운(알툴즈 다운로드) 제품 아이콘+텍스트 그리드 ===================== */
+header .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  background: hsla(0,0%,100%,.98);
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.25),0 8px 20px 0 rgba(0,0,0,.15);
+  border-radius: 12px;
+  min-width: 700px;
+  max-width: 900px;
+  padding: 32px 40px 24px 40px;
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+
+header .dropdown-col {
+  min-width: 180px;
+}
+header .dropdown-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4e5968;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+header .dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+header .dropdown-item {
+  min-width: 164px;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  text-decoration: none;
+  color: #222;
+}
+header .dropdown-grid.grid-4::after{
+  display: none;
+}
+header .dropdown-item:hover {
+  background-color: rgba(139,149,161,.1);
+}
+header .dropdown-icon {
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+header .dropdown-item strong {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: #222;
+}
+header .dropdown-bottom {
+  text-align: center;
+}
+header .dropdown-pack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 35px;
+  background: linear-gradient(90deg,#ff6746,#ff477e);
+  border-radius: 8px;
+  padding-left: 14px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(255,94,138,0.08);
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+  letter-spacing: -1px;
+  transition: background 0.2s;
+}
+header .dropdown-pack strong {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+header .dropdown-pack em {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 12px;
+}
+/* ===================== GNB 드롭다운(알툴즈 다운로드) 이미지 스타일 ===================== */
+header .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border-radius: 20px;
+  min-width: 800px;
+  max-width: 1000px;
+  padding: 40px 48px 32px 48px;
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+header .dropdown-col {
+  min-width: 180px;
+}
+header .dropdown-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #444;
+  letter-spacing: -1px;
+}
+header .dropdown-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+header .dropdown-col ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  gap: 8px;
+  min-width: 90px;
+  min-height: 70px;
+  text-align: center;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+header .dropdown-col ul li span {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 2px;
+}
+header .dropdown-col ul li:hover {
+  color: #08f;
+}
+header .dropdown-bottom {
+  border-top: none;
+  padding-top: 0;
+  text-align: center;
+}
+header .dropdown-pack {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff5e8a 0%, #ff7e5f 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 16px;
+  padding: 18px 0 18px 0;
+  width: 100%;
+  height: 56px
+  max-width: 700px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(255,94,138,0.08);
+  margin: 0 auto;
+  letter-spacing: -1px;
+  transition: background 0.2s;
+}
+header .dropdown-pack b {
+  font-weight: 900;
+  margin-left: 8px;
+}
+header .dropdown-pack:hover {
+  background: linear-gradient(90deg, #ff7e5f 0%, #ff5e8a 100%);
+}
+/* 드롭다운 메뉴 상위 li에 position:relative와 z-index 부여 */
+header li.gnb-dropdown {
+  z-index: 300;
+}
+/* ===================== GNB 드롭다운(알툴즈 다운로드) 개선 ===================== */
+header .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  min-width: 420px;
+  max-width: 700px;
+  padding: 24px 32px 16px 32px;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+header li.gnb-dropdown:hover > .dropdown-menu,
+header li.gnb-dropdown:focus-within > .dropdown-menu {
+  display: flex;
+}
+
+header .dropdown-col {
+  min-width: 120px;
+}
+header .dropdown-title {
+  font-weight: bold;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+header .dropdown-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .dropdown-col ul li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 0;
+  gap: 6px;
+}
+header .dropdown-col ul li span {
+  font-size: 18px;
+  margin-right: 6px;
+}
+header .dropdown-bottom {
+  border-top: 1px solid #eee;
+  text-align: right;
+  position: relative;
+}
+header .dropdown-pack {
+  color: #08f;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* slick promotion: 내부에 a 없는 빈 슬라이드는 아예 숨김 (빈 슬라이드 UX 개선) */
+section#promotion .promotionAni .slick-slide:not(:has(a)) {
+  display: none !important;
+}
+/* slick promotion 슬라이드: data-slick-index 기반으로 원본/복제 모두 배경이미지 적용 */
+section#promotion .promotionAni .slick-slide[data-slick-index="0"] a,
+section#promotion .promotionAni .slick-cloned[data-slick-index="0"] a {
+  background-image: url(../img/promotion.jpg);
+}
+section#promotion .promotionAni .slick-slide[data-slick-index="1"] a,
+section#promotion .promotionAni .slick-cloned[data-slick-index="1"] a {
+  background-image: url(../img/promotion2.jpg);
+}
+section#promotion .promotionAni .slick-slide[data-slick-index="2"] a,
+section#promotion .promotionAni .slick-cloned[data-slick-index="2"] a {
+  background-image: url(../img/promotion3.jpg);
+}
+section#promotion .promotionAni .slick-slide[data-slick-index="3"] a,
+section#promotion .promotionAni .slick-cloned[data-slick-index="3"] a {
+  background-image: url(../img/promotion4.jpg);
+}
+/* slick promotion 슬라이드: 복제(slide-cloned)에도 배경이미지 적용 */
+section#promotion .promotionAni .slick-cloned a {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/promotion3.jpg);
+}
+section#promotion .promotionAni .slick-cloned:nth-child(1) a {
+  background-image: url(../img/promotion.jpg);
+}
+section#promotion .promotionAni .slick-cloned:nth-child(2) a {
+  background-image: url(../img/promotion2.jpg);
+}
+section#promotion .promotionAni .slick-cloned:nth-child(3) a {
+  background-image: url(../img/promotion3.jpg);
+}
+section#promotion .promotionAni .slick-cloned:nth-child(4) a {
+  background-image: url(../img/promotion4.jpg);
+}
+/* 슬라이드 커스텀 컨트롤 버튼 */
+.wnext {
+  position: absolute;
+  top: 548px;
+  left: 255px;
+  z-index: 100;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+/* 슬라이드 번호 중앙 정렬 */
+
+.wnext .slide-index {
+  display: inline-block;
+  min-width: 40px;
+  text-align: center;
+  font-size: 10px;
+  color: #222;
+  padding-top: 3px;
+}
+.wnext button {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.wnext button:hover {
+  color: #000;
+}
+
 /*상단 영역*/
 header {
   padding: 0 60px;
@@ -20,30 +1238,35 @@ header div.wrap2 h1 a {
   color: transparent;
 }
 header div.wrap2 ul {
-  
+  gap: 50px;
 }
-header div.wrap2 ul li {
+header div.wrap2 .flex li {
   font-size: 16px;
   font-weight: 700;
+  position: relative;
 }
-header div.wrap2 ul li a {
+header div.wrap2 .flex li a {
   will-change: background-color;
   transition: background-color .1s ease 0s;
   display: block;
   font-size: 16px;
-  line-height: 1;
+  line-height: 2;
   font-weight: 700;
   border-radius: 6px;
-  padding: 12px 16px;
+  margin: 0px 0px 5px 0px;
 }
-header div.wrap2 ul li a::after{
-  width: 10px;
-  height: 10px;
+header div.wrap2 .flex li>a::after {
+  width: 12px;
+  height: 12px;
   vertical-align: 1px;
-  background: url(../img/arrowdown.svg) no-repeat center;
+  background: url(../img/drop_black.png) no-repeat center;
+  background-size: contain;
   content: "";
   display: inline-block;
   margin-left: 6px;
+  position: absolute;
+  top: 8px;
+  right: -16px;
 }
 header div.wrap2 span {
   display: flex;
@@ -62,7 +1285,7 @@ header div.wrap2 span .aplus-btn {
 }
 
 /* 로그인 버튼 */
-header div.wrap2 span .login-btn {
+header .wrap2 .login-btn {
   height: 36px;
   font-size: 13px;
   padding: 0 16px;
@@ -74,7 +1297,9 @@ header div.wrap2 span .login-btn {
   border-radius: 10px;
   text-decoration: none;
 }
-
+header div.wrap2 span .login-btn:hover {
+  opacity: 0.7;
+}  
 /* 타이틀영역 */
 #title {
   max-width: 2560px; 
@@ -119,19 +1344,7 @@ header div.wrap2 span .login-btn {
   margin: 0 auto;
   width: 1125px;
 }
-#title::after{
-  content: "";
-  width: 169px;
-  height: 16px;
-  background-image: url(../img/titlearrows.png);
-  background-size: cover;
-  position: absolute;
-  left: 19%;
-  right: 0;
-  top: 92%;
-  background-color: #0000;
-  background-repeat: no-repeat;
-}
+
 .titleAni div h2.bold {
   line-height: 1.4;
   letter-spacing: -2px;
@@ -334,9 +1547,9 @@ section#business div p {
   color: #fff;
 }
 section#business div a {
-  height: 26px;
+  height: 20px;
   background-color: #fff;
-  padding: 15px 25px;
+  padding: 20px 20px;
   border-radius: 6px;
   font-size: 16px;
   font-weight: 1000;
@@ -369,7 +1582,6 @@ section#altools {
   margin: 28px auto 0;
 }
 section#altools div.wrap { 
-  max-width: 1120px;
   flex-direction: column;
   align-items: center;
   gap: 50px;
@@ -438,6 +1650,7 @@ section#altools div.wrap ul.list li.m:hover{
 section#altools div.wrap ul.list li.m a {
   padding: 0px 20px 24px 20px;
   height: 340px;
+  width: 270px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -539,6 +1752,7 @@ section#altools div.wrap ul.list li.m a > span::after{
 /* 프로모션 */
 section#promotion {
   margin-top: 28px;
+  position: relative;
 }
 section#promotion div.wrap {
   max-width: 2560px;
@@ -547,6 +1761,7 @@ section#promotion div.wrap {
   margin: 0 auto;
   overflow: hidden;
   height: 360px;
+  position: relative;
 }
 section#promotion div.wrap h2 {
   
@@ -555,41 +1770,38 @@ section#promotion div.wrap ul {
   width: 100%;
   height: 100%;
 }
-section#promotion div.wrap ul:after{
-  content: "-";
+
+/* 프로모션 커스텀 네비게이션 버튼 */
+.promotion-arrow {
   position: absolute;
-  left: 46px;
-  bottom: 0;
-  top: 171px;
-  background-image: url(../img/arrowright.png);
-  background-position: center;
-  background-color: #ffffff78;
-  background-size: 50%;
-  border-radius: 50%;
-  transform: rotateZ(-180deg);
+  top: 50%;
+  transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  color: #0000;
-  background-repeat: no-repeat;
-  opacity: .9;
+  border-radius: 50%;
+  background: #ffffffc7;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  pointer-events: auto;
 }
-section#promotion div.wrap ul:before{
-  content: "-";
-  position: absolute;
-  right: 39px;
-  bottom: 0;
-  top: 171px;
-  background-image: url(../img/arrowright.png);
-  width: 50px;
-  height: 50px;
-  background-size: 50%;
-  background-color: #ffffff78;
-  border-radius: 50%;
-  background-position: center;
-  color: transparent;
-  z-index: 99;
-  background-repeat: no-repeat;
-  opacity: .9;
+.promotion-arrow img {
+  width: 24px;
+  height: 24px;
+}
+.promotion-arrow.promotion-prev {
+  left: 25px;
+}
+.promotion-arrow.promotion-next {
+  right: 25px;
+}
+.promotion-arrow:hover {
+  background: #fff;
 }
 section#promotion div.wrap ul li {
   width: 100%;
@@ -882,7 +2094,7 @@ footer {
   line-height: 1;
   color: #8b95a1;
   border-radius: 4px;
-  padding: 8px 10px;
+  padding: 8px 10px 8px 0px;
   width: fit-content;
   height: fit-content;
 }
@@ -903,30 +2115,18 @@ footer div ul.fnb2{
  footer div ul.fnb2 li:last-child{
    justify-self: right;
  }
- footer div ul.fnb2 li a {
+.fnb2 > li > a {
+ padding: 10px 10px 10px 0px !important;
+ }
+
+ footer div ul.fnb2>li a {
   line-height: 2;
-  color: #8b95a1;
   font-size: 13px;
+  line-height: 1;
   font-weight: 600;
+  color: #8b95a1;
   padding: 10px 10px 9px;
  }
- footer div ul.fnb2 li:nth-child(1) a{
-   padding-left: 0;
- }
-footer div ul.fnb2 li:nth-child(3) a{
-  color: #4e5968;
-}
- footer div ul.fnb2 li:nth-child(7) a::after{
-  content: "";
-  width: 17px;
-  background-image: url(../img/plus.png);
-  display: block;
-  background-size: 80%;
-  transform: translateY(-21px) translateX(61px);
-  opacity: .5;
-  height: 17px;
-  background-repeat: no-repeat;
-}
  footer div ul.sns {
   gap:10px;
   margin-bottom:20px;
