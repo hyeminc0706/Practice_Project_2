@@ -9,9 +9,8 @@ I designed and developed the entire interface to study how motion and component 
 ## 📌 Overview
 This project was created to practice building modular UI components and applying animations to enhance interaction flow.  
 The goal was to understand how layout, timing, and motion contribute to a more engaging user interface.
-
 <img width="3408" height="1948" alt="image" src="https://github.com/user-attachments/assets/047c9b1c-0a11-4a91-9756-929b18c34b96" />
-
+*Desktop View
 ---
 
 ## 🎯 Goals
@@ -51,25 +50,30 @@ The goal was to understand how layout, timing, and motion contribute to a more e
 - Applied spacing and contrast for clarity  
 - Defined motion patterns for sliders and hover interactions  
 
-<img width="3326" height="940" alt="image" src="https://github.com/user-attachments/assets/38ae9d09-c1b8-4f2d-9e87-dcabe3644f24" />
-*UI design references illustrating layout clarity, spacing rules, and component styling used as inspiration for ALTools.*
-
-<img width="3386" height="1832" alt="image" src="https://github.com/user-attachments/assets/da9c91ab-72dd-4a05-8d49-22bc2b7588ec" />
-*Hover interaction demonstrating component responsiveness and motion behavior implemented in ALTools.*
-
 ### 3️⃣ Development
 - Built the layout using HTML/CSS  
 - Developed UI components with JavaScript/jQuery  
 - Created custom dropdown menu with accessibility features (mouse hover + keyboard navigation)
+  <img width="877" height="498" alt="dropdown menu" src="https://github.com/user-attachments/assets/89c19783-802c-41ca-a002-73cb2cadb475" />
+  <img width="349" height="360" alt="dropup menu" src="https://github.com/user-attachments/assets/8b2ea67b-27e8-4c3e-bb21-b25fe568fc5e" />
+
 - Integrated Slick Slider and built custom controls:
-  - Custom control bar with prev/next navigation, play/pause toggle, real-time slide index
-  - 2-row 4-column grid slider layout for product showcase
-  - Conditional slider initialization based on viewport (mobile-only activation for performance)
+  Custom control bar with prev/next navigation, play/pause toggle, real-time slide index
+ <img width="537" height="348" alt="slide control bar" src="https://github.com/user-attachments/assets/f814c8e7-2e28-48f7-9826-1f6521f123f6" />
+- 2-row 4-column grid slider layout for product showcase
+  <img width="1461" height="866" alt="2row 4col" src="https://github.com/user-attachments/assets/0e80cff8-b690-44e7-a828-4d307c2ec8ec" />
+
 - Implemented responsive design with custom breakpoints:
   - **Desktop**: 1200px and above (full layout with hover effects)
   - **Tablet**: 768px - 1199px (adjusted layouts, simplified interactions)
+    <img width="985" height="936" alt="tablet view" src="https://github.com/user-attachments/assets/9a8d4c4a
+    <img width="1125" height="916" alt="tablet view2" src="https://github.com/user-attachments/assets/02c65a36-c3e3-48e0-aa8e-529cc7e6aebf" />
+-1879-4fce-884e-8c810eb7726e" />
+    
   - **Mobile**: 767px and below (touch-optimized, dynamic slider activation)
-- Conducted cross‑browser testing and refinements  
+  - <img width="522" height="850" alt="mobile view" src="https://github.com/user-attachments/assets/a4a2e3fb-9045-4c30-b8ec-b7ac55e00c24" />
+<img width="691" height="946" alt="mobile view2" src="https://github.com/user-attachments/assets/8bf39026-3bf3-46b2-8162-04b5cd748ded" />
+- Conducted cross‑browser testing and refinements
 
 ---
 
