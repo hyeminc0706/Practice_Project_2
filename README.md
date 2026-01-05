@@ -87,9 +87,9 @@ The goal was to understand how layout, timing, and motion contribute to a more e
 ---
 
 ## 🔗 Live Demo & Source
-- Live Demo: https://hyeminc0706.github.io/Altools/  
-- GitHub Repository: https://github.com/hyeminc0706/Altools 
-- Case Study: https://little-gauge-2b1.notion.site/ALTools-Case-Study-2d82c743869e80d3ba1fc5f975b0a579
+- Live Demo: [[Link]https://hyeminc0706.github.io/Altools/]
+- GitHub Repository: [[Link]https://github.com/hyeminc0706/Altools]
+- Case Study: [[Link]https://little-gauge-2b1.notion.site/ALTools-Case-Study-2d82c743869e80d3ba1fc5f975b0a579]
 
 ---
 
